@@ -13,6 +13,7 @@ interface Item {
     description3: string;
     siteUrl: string;
     codeUrl: string;
+    column: number;
  }
 
 
@@ -31,6 +32,7 @@ export const items: Item[] = [
         description3: "This project is an e-commerce platform for purchasing audio equipment, which I built with React. It includes detailed pages of each item, a functional cart, and checkout system.",
         siteUrl: 'https://www.google.com',
         codeUrl: 'https://www.google.com',
+        column: 1,
     },
     {
         id: "2",
@@ -45,6 +47,7 @@ export const items: Item[] = [
         description3: 'A clean user-friendly e-commerce site',
         siteUrl: 'https://www.google.com',
         codeUrl: 'https://www.google.com',
+        column: 2,
     },
     {
         id: "3",
@@ -59,6 +62,7 @@ export const items: Item[] = [
         description3: 'A clean user-friendly e-commerce site',
         siteUrl: 'https://www.google.com',
         codeUrl: 'https://www.google.com',
+        column: 1,
     },
     {
         id: "4",
@@ -73,5 +77,6 @@ export const items: Item[] = [
         description3: 'A clean user-friendly e-commerce site',
         siteUrl: 'https://www.google.com',
         codeUrl: 'https://www.google.com',
+        column: 2,
     },
 ];

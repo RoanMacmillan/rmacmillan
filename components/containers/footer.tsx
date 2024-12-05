@@ -12,7 +12,7 @@ const Footer = () => {
   const footerContent = getFooterContent(pathname);
 
   return (
-    <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px]">
+    <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1280px] mx-auto">
         <div className="absolute rotate-90 right-[-60px] flex items-center font-semibold top-[225px]">
             
             <span className="mr-6 leading-3">Scroll to top</span>

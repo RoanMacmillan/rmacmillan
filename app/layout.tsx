@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="px-5 max-w-[1330px] mx-auto">
+      <body className="px-5 customMd:px-[80px] xl:px-36 mx-auto">
         <div className="w-full h-1 bg-black absolute top-0 left-0"></div>
         <header>
           <Nav></Nav>
