@@ -45,7 +45,7 @@ const Footer = () => {
       </nav>
 
       <p className="text-sm text-gray-500">
-        © 2023 Roan Macmillan. Skill Icons created by Freepik - Flaticon
+        © 2024 Roan Macmillan - All rights reserved
       </p>
     </footer>
   );
