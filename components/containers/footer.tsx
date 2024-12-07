@@ -5,6 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
+import ScrollToTopButton from "./scroll";
+import { Scroll } from "lucide-react";
+
+
+const variant = 'bg-red-500';
 
 const Footer = () => {
   const pathname = usePathname();
@@ -13,11 +18,10 @@ const Footer = () => {
 
   return (
     <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1280px] mx-auto">
-        <div className="absolute rotate-90 right-[-60px] flex items-center font-semibold top-[225px]">
-            
-            <span className="mr-6 leading-3">Scroll to top</span>
-            <Image className="rotate-90" src="/images/arrow.svg" alt="Arrow" width={36} height={36} />
-            </div>
+        
+
+      <ScrollToTopButton className="lg:hidden top-[225px] right-[-60px]"></ScrollToTopButton>
+
       {/* <p>{text}</p> */}
 
       <Separator className="hidden sm:block sm:mb-[100px]"></Separator>
