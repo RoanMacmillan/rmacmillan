@@ -37,7 +37,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <div className="mt-[50px] customMd:mt-[184px] max-w-[1280px] mx-auto">
+    <div className=" max-w-[1280px] mx-auto px-6 customMd:px-8">
       <p>{item.number}-04</p>
       <h1 className="mt-4 text-[60px] customMd:text-[80px] leading-[1] tracking-[-2px] font-bold">
         {item.title}

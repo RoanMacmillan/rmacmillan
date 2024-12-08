@@ -4,7 +4,7 @@ import React from "react";
 
 const ContactPage: React.FC = () => {
   return (
-    <div>
+    <div className="max-w-[1280px] mx-auto px-6 customMd:px-8">
         <ContactHero></ContactHero>
       <ContactFlex></ContactFlex>
     </div>

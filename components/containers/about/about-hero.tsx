@@ -14,7 +14,7 @@ const AboutHero = () => {
 
 
   return (
-    <div className="relative sm:flex sm:flex-row-reverse sm:items-center sm:gap-24 sm:justify-between  mx-auto mt-[50px] md:mt-[133px] lg:mt-[184px] lg:max-w-[1584px]">
+    <div className="relative sm:flex sm:flex-row-reverse sm:items-center sm:gap-24 sm:justify-between max-w-[1280px] px-6 customMd:px-8 mx-auto">
       <div className="h-[300px] sm:h-[440px] sm:w-1/2 w-full sm:max-w-[510px] relative">
         <Image
           src={hero}

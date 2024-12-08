@@ -17,7 +17,7 @@ const Footer = () => {
   const footerContent = getFooterContent(pathname);
 
   return (
-    <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1280px] mx-auto">
+    <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1280px] mx-auto px-6 customMd:px-8">
         
 
       <ScrollToTopButton className="lg:hidden top-[225px] right-[-60px]"></ScrollToTopButton>
@@ -30,9 +30,17 @@ const Footer = () => {
         <span className="font-light">{footerContent.title}</span>
         <span className="font-bold">{footerContent.title2}</span>
       </h2>
-      <Link className="font-semibold" href={footerContent.link.href}>
-        {footerContent.link.label}
-      </Link>
+      
+
+
+
+      <Link href={footerContent.link.href} className="group text-left">
+            <p className="mt-[10px] font-semibold">{footerContent.link.label}</p>
+            <div className={`relative mt-[5px] h-[2px] ${footerContent.link.underlinWidth} bg-gray-200`}>
+              <div className="absolute left-0 top-0 h-[2px] w-0 bg-emerald-600 transition-all duration-300 group-hover:w-full"></div>
+            </div>
+          </Link>
+
 
       <nav className="mt-[150px] sm:flex gap-2 items-center">
         <p className="text-gray-500 sm:text-sm">Follow me</p>
@@ -76,20 +84,27 @@ function getFooterContent(pathname: string) {
       return {
         title: `Let's`,
         title2: `Talk`,
-        link: { href: "/about", label: "Contact" },
+        link: { href: "/contact", label: "Contact", underlinWidth: "w-[70px]" },
       };
     case "/about":
       return {
         title: `Let's`,
         title2: `Talk`,
-        link: { href: "/about", label: "Contact" },
+        link: { href: "/about", label: "Contact", underlinWidth: "w-20" },
       };
 
     case "/project":
       return {
         title: `See`,
         title2: `More`,
-        link: { href: "/about", label: "Contact" },
+        link: { href: "/", label: "Portfolio", underlinWidth: "w-24" },
+      };
+
+      case "/contact":
+      return {
+        title: `View`,
+        title2: `Portfolio`,
+        link: { href: "/", label: "Portfolio", underlinWidth: "w-24" },
       };
 
     default:

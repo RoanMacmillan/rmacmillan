@@ -7,7 +7,7 @@ import Image from "next/image";
 const ContactHero = () => {
   return (
     <div
-      className={`relative mx-auto mt-[50px] flex h-[300px] max-w-[1545px] justify-center transition-all duration-500 customMd:mt-[143px] customMd:h-[480px]`}
+      className={`relative mx-auto flex h-[300px] justify-center transition-all duration-500 customMd:h-[480px]`}
     >
       <Image
         alt="dark image"

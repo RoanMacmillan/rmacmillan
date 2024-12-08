@@ -6,7 +6,7 @@ import skills from "@/data/skills";
 
 const SkillsGrid = () => {
   return (
-    <div className="mx-auto mt-[60px] grid grid-cols-2 md:grid-cols-4 lg:mt-[100px]">
+    <div className="mx-auto mt-[60px] grid grid-cols-2 md:grid-cols-4 lg:mt-[100px] max-w-[1280px] px-6 customMd:px-8">
       {skills.map((skill, index) => (
         <div
           key={index}

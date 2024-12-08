@@ -38,9 +38,13 @@ const ServicesFlex = () => {
   return (
     <div
       id="scrollTarget"
-      className="mt-[60px] px-6 py-8 bg-customBlack customMd:px-[0px] customMd:pb-[100px] customMd:pt-[64px] customMd:mt-[100px]"
+      className="mt-[60px] py-8 bg-customBlack customMd:pb-[100px] customMd:pt-[64px] customMd:mt-[100px]"
     >
-      <div className="mx-auto max-w-[1584px] xl:px-36 px-0 customMd:px-20">
+
+
+      <div className="max-w-[1280px] px-6 customMd:px-8 mx-auto">
+
+      <div className="mx-auto">
         <Image
           src={circles}
           alt="Circles logo"
@@ -58,7 +62,7 @@ const ServicesFlex = () => {
       </div>
 
       <ScrollReveal>
-        <div className="mx-auto mt-8 flex max-w-[1584px] xl:px-36 flex-col gap-4 customMd:px-[80px] lg:mt-[72px] justify-between lg:flex-row lg:gap-6 px-0 lg:px-20">
+        <div className="mx-auto mt-8 flex flex-col gap-4 lg:mt-[72px] justify-between lg:flex-row lg:gap-6">
           {services.map((service, index) => (
             <div key={index} className="ttt">
               <div className="border border-outlineGray px-6 py-[40px] customMd:p-[40px]">
@@ -81,6 +85,7 @@ const ServicesFlex = () => {
           ))}
         </div>
       </ScrollReveal>
+      </div>
     </div>
   );
 };
