@@ -37,7 +37,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <div className=" max-w-[1280px] mx-auto px-6 customMd:px-8">
+    <div className=" max-w-[1380px] mx-auto px-6 customMd:px-20">
       <p>{item.number}-04</p>
       <h1 className="mt-4 text-[60px] customMd:text-[80px] leading-[1] tracking-[-2px] font-bold">
         {item.title}
@@ -107,7 +107,7 @@ export default async function Page({ params }: PageProps) {
           height={2000}
         ></Image>
 
-        <Separator className="mt-[60px] lg:hidden" />
+        <Separator className="mt-[60px] customMd:hidden" />
       </div>
     </div>
   );

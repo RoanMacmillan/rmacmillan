@@ -42,7 +42,7 @@ const ServicesFlex = () => {
     >
 
 
-      <div className="max-w-[1280px] px-6 customMd:px-8 mx-auto">
+      <div className="max-w-[1380px] px-6 customMd:px-20 mx-auto">
 
       <div className="mx-auto">
         <Image
