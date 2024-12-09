@@ -1,6 +1,7 @@
+
 import { notFound } from "next/navigation";
 import * as React from "react";
-import { items } from "@/data/data";
+import { items } from "@/data/data.json";
 import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";

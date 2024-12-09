@@ -84,7 +84,7 @@ function getFooterContent(pathname: string) {
       return {
         title: `Let's`,
         title2: `Talk`,
-        link: { href: "/about", label: "Contact", underlinWidth: "w-[70px]" },
+        link: { href: "/contact", label: "Contact", underlinWidth: "w-[70px]" },
       };
 
     // case "/project":

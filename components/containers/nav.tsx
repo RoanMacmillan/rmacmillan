@@ -6,6 +6,8 @@ import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { links } from "./footer";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import cross from '../../public/images/close.svg'
 
 const Nav: React.FC = () => {
   const pathname = usePathname();
@@ -16,6 +18,10 @@ const Nav: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeModal = () => {  
+
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -24,6 +30,7 @@ const Nav: React.FC = () => {
       document.body.style.overflow = "auto";
     }
   }, [isOpen]);
+
 
   return (
     <>
@@ -36,8 +43,12 @@ const Nav: React.FC = () => {
             RM
           </Link>
 
-          <button onClick={toggleModal}>
-            <HamburgerMenuIcon className="" />
+          <button
+            className="group flex h-6 w-5 flex-col items-center justify-center gap-[6px] transition-all duration-300 hover:scale-125  "
+            onClick={toggleModal}
+          >
+            <div className="h-[2px] w-full bg-customBlack transition-all duration-300 group-hover:bg-customEmerald"></div>
+            <div className="h-[2px] w-full bg-customBlack transition-all duration-300 group-hover:bg-customEmerald"></div>
           </button>
         </div>
       </nav>
@@ -59,11 +70,14 @@ const Nav: React.FC = () => {
           </Link>
 
           <button onClick={toggleModal}>
-            {/* <HamburgerMenuIcon className="text-white" /> */}
-            <Cross1Icon className="text-customWhite" />
+            <Image
+              alt="cross"
+              className={`invert-[0.5] hover:invert-[1] brightness-0 transition-all duration-300`}
+              src={cross}
+              width={32}
+              height={32}></Image>
           </button>
         </div>
-
 
         <div className="flex items-center gap-52 w-full max-w-[1220px] xl:mx-auto">
           <ul>
@@ -74,6 +88,7 @@ const Nav: React.FC = () => {
                     pathname === item.url ? "text-customWhite" : ""
                   } text-customGray text-6xl sm:text-7xl customMd:leading-snug font-light hover:text-customWhite transition-colors`}
                   href={item.url}
+                  onClick={closeModal}
                 >
                   {item.name}
                 </Link>
