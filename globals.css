@@ -74,16 +74,16 @@ body {
 }
 
 .lineIn {
-  animation: lineIn 0.4s ease forwards;
+  animation: lineIn 0.4s ease;
   animation-delay: 1s;
 }
 
 @keyframes lineIn {
   0% {
-    opacity: 0;
+    height: 0;
   }
   100% {
-    opacity: 1;
+    height: 102%;
   }
 
   
@@ -162,3 +162,17 @@ body {
 .animate-moving-bar {
   animation: moving-bar 2s linear infinite;
 }
+
+
+.fade-in {
+  opacity: 0;
+  /* transform: translateY(20px); */
+  transition: opacity 0.8s ease;
+  transition-delay: 5s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  /* transform: translateY(0); */
+}
+

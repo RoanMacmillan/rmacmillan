@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 const useIntersectionObserver = (options = {}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement | null>(null);
+  const elementRef = useRef<any>(null);
 
   useEffect(() => {
     if (!elementRef.current) {

@@ -15,7 +15,7 @@ const ScrollToTopButton: React.FC = () => {
     <button
       type="button"
       onClick={handleScrollToTop}
-      className={`bottom-[250px] right-[-30px] lg:bottom-[125px] lg:right-[-100px] absolute group rotate-90 flex items-center font-semibold`}
+      className={`bottom-0 right-0 absolute group rotate-90 flex items-center font-semibold`}
     >
       <span className="mr-6 leading-3">Scroll to top</span>
       <Image

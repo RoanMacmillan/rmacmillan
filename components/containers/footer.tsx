@@ -1,14 +1,9 @@
 "use client";
 import React from "react";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import { Separator } from "../ui/separator";
 import ScrollToTopButton from "./scroll";
-import { Scroll } from "lucide-react";
-
-const variant = "bg-red-500";
+import { Separator } from "../ui/separator";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -17,11 +12,16 @@ const Footer = () => {
 
   return (
     <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1380px] mx-auto px-6 customMd:px-20">
-      <ScrollToTopButton className="lg:hidden top-[250px] right-[10px]"></ScrollToTopButton>
 
-      {/* <p>{text}</p> */}
 
-      <Separator className="hidden sm:block sm:mb-[100px]"></Separator>
+
+<Separator className="hidden bg-gray-200 sm:block sm:mb-[100px]"></Separator>
+
+
+      <ScrollToTopButton />
+
+
+
 
       <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[70px]">
         <span className="font-light">{footerContent.title}</span>
@@ -39,7 +39,7 @@ const Footer = () => {
         </Link>
       </div>
 
-      <nav className="mt-[150px] sm:flex gap-2 items-center">
+      <nav className="mt-[150px] sm:flex gap-2 items-baseline">
         <p className="text-gray-500 sm:text-sm">Follow me</p>
 
         <ul className="my-6 sm:flex sm:my-0 gap-2">
