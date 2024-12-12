@@ -40,7 +40,7 @@ const ContactFlex = () => {
 
         <h3 className="mt-6 text-lg font-bold">(44) 123-3210</h3>
         <p className="mt-6 text-[15px] text-customGray">
-          I work from Monday to Friday. Feel free to reach out!
+          Reach out to me via phone. I am available for calls.
         </p>
       </div>
     </div>

@@ -1,25 +1,17 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast"
-import { ToastAction } from "@/components/ui/toast";
-
+import { useToast } from "@/hooks/use-toast";
 
 const Form: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [termsError, setTermsError] = useState("");
-  const [success, setSuccess] = useState("fail");
 
   const { toast } = useToast();
-
-  useEffect(() => {
-    console.log("isChecked", isChecked);
-    console.log("submit status", success);
-  }, [isChecked, success]);
 
   const [errors, setErrors] = useState({
     name: "", // Initialize with an empty string
@@ -103,41 +95,44 @@ const Form: React.FC = () => {
         }));
 
         setErrors({
-          name: "", // Initialize with an empty string
+          name: "",
           email: "",
           message: "",
         });
 
         setTermsError("");
-        setSuccess("success");
-
-        // Perform any other success actions here
+        toast({
+          description:
+            "Your message has been sent. I try to respond within 24 hours.",
+        });
       } else {
         console.error("Failed to send email");
 
         setErrors({
-          name: "", // Initialize with an empty string
+          name: "",
           email: "",
           message: "",
         });
 
         setTermsError("");
-
-        // Handle error scenario
       }
     } catch (error) {
       console.error("An error occurred:", error);
 
       setErrors({
-        name: "", // Initialize with an empty string
+        name: "",
         email: "",
         message: "",
       });
 
       setTermsError("");
-      setSuccess("fail");
-
-      // Handle error scenario
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description:
+          "Message could not be sent. Please contact me through social media.",
+        // action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
     } finally {
       setIsLoading(false);
     }
@@ -232,23 +227,17 @@ const Form: React.FC = () => {
 
       <Button
         type="submit"
-        size={"lg"}
-        className={`mt-12 rounded-sm font-bold`}
-        onClick={success === 'fail' ? () => toast({
-            variant: "destructive",
-            title: "Uh oh! Something went wrong.",
-            description: "There was a problem with your request.",
-            action: <ToastAction altText="Try again">Try again</ToastAction>,
-          }) : success === 'success' ? () => toast({description: "Your message has been sent!"}) : undefined}
+        className={`mt-12 w-[169px] py-5 rounded-sm font-bold ${
+          isLoading ? "opacity-75 pointer-events-none" : ""
+        }`}
+        disabled={isLoading}
       >
-        Send Now
+        {isLoading ? "Sending..." : "Send Message"}
       </Button>
 
       {isLoading && (
         <div className="fixed left-0 w-1/2 h-1 bg-customEmerald top-0 animate-moving-bar"></div>
       )}
-
-      
     </form>
   );
 };
