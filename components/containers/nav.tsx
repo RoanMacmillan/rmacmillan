@@ -78,7 +78,7 @@ const Nav: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-52 w-full max-w-[1220px] xl:mx-auto">
-          <ul>
+          <ul className={`${isOpen ? 'fadeInScale' : ''}`}>
             {navigation.map((item) => (
               <li key={item.id}>
                 <Link

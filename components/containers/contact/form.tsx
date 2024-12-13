@@ -155,7 +155,7 @@ const Form: React.FC = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your Name"
-            className="mt-1 border-b-2 border-customBlack py-4 text-sm outline-none"
+            className="mt-1 border-b-2 border-customBlack bg-customWhite py-4 text-sm outline-none"
           />
 
           {errors.name && (
@@ -176,7 +176,7 @@ const Form: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Your Email"
-            className="mt-1 border-b-2 border-customBlack py-4 text-sm outline-none"
+            className="mt-1 border-b-2 bg-customWhite border-customBlack py-4 text-sm outline-none"
           />
 
           {errors.email && (
@@ -197,7 +197,7 @@ const Form: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="How Can I help?"
-          className="border-b-2  border-customBlack pb-12 pt-6 text-sm outline-none customMd:pb-24"
+          className="border-b-2 bg-customWhite border-customBlack pb-12 pt-6 text-sm outline-none customMd:pb-24"
         />
 
         {errors.message && (
@@ -208,7 +208,7 @@ const Form: React.FC = () => {
       </div>
 
       <div className="relative mt-6 flex flex-col gap-4 customMd:mt-8">
-        <div className="flex items-center space-x-2 mt-6">
+        <div className="flex items-center gap-2 lg:gap-4 mt-6">
           <Checkbox
             id="terms"
             checked={isChecked}
@@ -218,7 +218,14 @@ const Form: React.FC = () => {
             htmlFor="terms"
             className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
-            Accept terms and conditions
+            I agree to the{" "}
+            <a
+              href="#"
+              className="underline"
+              target="_blank"
+            >
+              terms and conditions
+            </a>
           </label>
         </div>
 
@@ -228,7 +235,7 @@ const Form: React.FC = () => {
       <Button
         type="submit"
         className={`mt-12 w-[169px] py-5 rounded-sm font-bold ${
-          isLoading ? "opacity-75 pointer-events-none" : ""
+          isLoading ? "brightness-75 pointer-events-none" : ""
         }`}
         disabled={isLoading}
       >
