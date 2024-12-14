@@ -4,10 +4,9 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { items } from "@/data/data.json";
 import LoadingBar from "../../../animations/loading-bar";
 import BlurFade from "@/components/ui/blur-fade";
-
+ 
 
 interface ProjectDetailProps {
   item: ProjectDetailItem;

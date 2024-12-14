@@ -1,15 +1,20 @@
 
 import { notFound } from "next/navigation";
 import * as React from "react";
-import { items } from "@/data/data.json";
 import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import ProjectDetail from "@/components/containers/project/detail";
 
+import data from "@/data/data.json";
+
+const items = data.items;
+
 interface PageProps {
   params: { id: string };
 }
+
+
 
 // Generate dynamic metadata
 export async function generateMetadata({ params }: PageProps) {
@@ -32,7 +37,12 @@ export default async function Page({ params }: PageProps) {
   // asynchronous access of `params.id`.
   const { id } = params;
 
+
+
   const item = items.find((item) => item.id === id);
+
+  console.log("Params:", params);
+
 
   if (!item) {
     return notFound();

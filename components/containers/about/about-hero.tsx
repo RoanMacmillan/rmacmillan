@@ -23,10 +23,7 @@ const AboutHero = () => {
           fill
           className="object-cover opacity-0 transition-all duration-700 scale-90"
           priority
-          onLoadingComplete={(image) => {
-            image.classList.remove("opacity-0");
-            image.classList.remove("scale-90");
-          }}
+          
         />
       </div>
 
