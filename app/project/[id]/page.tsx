@@ -1,24 +1,15 @@
-
 import { notFound } from "next/navigation";
-import * as React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
-import ProjectDetail from "@/components/containers/project/detail";
-
 import data from "@/data/data.json";
-
+import ProjectDetail from "@/components/containers/project/detail";
 const items = data.items;
-
 interface PageProps {
   params: { id: string };
 }
 
-
-
 // Generate dynamic metadata
 export async function generateMetadata({ params }: PageProps) {
-  const item = items.find((item) => item.id === params.id);
+  const resolvedParams = await params; // Await params here
+  const item = items.find((item) => item.id === resolvedParams.id);
 
   if (!item) {
     return {
@@ -28,32 +19,20 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return {
-    title: `${item.title}`, // Dynamic title
-    description: item.description2, // Use item details for metadata
+    title: `${item.title}`,
+    description: item.description2,
   };
 }
 
 export default async function Page({ params }: PageProps) {
+  const resolvedParams = await params; // Await params here
+  console.log("Resolved Params:", resolvedParams); // Logs params after awaiting
 
-  console.log("Params:", params);
-console.log('hello')
-
-  // asynchronous access of `params.id`.
-  const { id } = params;
-
-
-
-  const item = items.find((item) => item.id === id);
-
-
+  const item = items.find((item) => item.id === resolvedParams.id);
 
   if (!item) {
     return notFound();
   }
 
-  return (
-
-    <ProjectDetail item={item} />
-    
-  );
+  return <ProjectDetail item={item} />;
 }
