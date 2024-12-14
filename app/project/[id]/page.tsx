@@ -39,7 +39,7 @@ interface PageProps {
 //   };
 // }
 
-export default async function Page(props: { params: PageProps }) {
+export default async function Page(props: { params: Promise<PageProps> }) {
   // asynchronous access of `params.id`.
   // const { id } = await params;
   // const { id } = use(params);
