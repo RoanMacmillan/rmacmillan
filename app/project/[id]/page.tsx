@@ -10,7 +10,7 @@ interface PageProps {
 
 // Generate dynamic metadata
 export async function generateMetadata({ params }: PageProps) {
-  const resolvedParams = params; // Await params here
+  const resolvedParams = await params; // Await params here
   const item = items.find((item) => item.id === resolvedParams.id); // Access the resolved id
 
   if (!item) {
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function Page({ params }: PageProps) {
-  const resolvedParams = params; // Await params here
+  const resolvedParams = await params; // Await params here
   console.log("Resolved Params:", resolvedParams); // Logs params after awaiting
 
   const item = items.find((item) => item.id === resolvedParams.id);

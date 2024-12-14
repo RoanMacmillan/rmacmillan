@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import "../globals.css";
 import Nav from "@/components/containers/nav";
 import Footer from "@/components/containers/footer";
@@ -35,7 +35,7 @@ export default function RootLayout({
 
         <main className="mt-[50px] customMd:mt-0">{children}</main>
         <Toaster></Toaster>
-        <ScrollToTopButton classname="bottom-[130px] right-[-40px] hidden lg:flex"></ScrollToTopButton>
+        {/* <ScrollToTopButton classname="bottom-[130px] right-[-40px] hidden lg:flex"></ScrollToTopButton> */}
         <Footer></Footer>
       </body>
     </html>
