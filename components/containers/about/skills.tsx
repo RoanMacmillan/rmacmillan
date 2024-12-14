@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import skills from "@/data/skills";
+import BlurFade from "@/components/ui/blur-fade";
 
 const SkillsGrid = () => {
   return (
@@ -27,19 +28,16 @@ const SkillsGrid = () => {
           
           `}
         >
+          <BlurFade delay={skill.id * 0.05} inView>
           <Image
             src={skill.logo}
             alt={`${skill.name} Logo`}
             width={60}
             height={60}
-            className={`translate-y-[10px] overflow-hidden opacity-0 delay-[${
-              skill.id * 50
-            }ms] transition-all duration-[.6s]`}
-            onLoadingComplete={(image) => {
-              image.classList.remove("opacity-0");
-              image.classList.remove("translate-y-[10px]");
-            }}
+            className={`overflow-hidden`}
+           
           />
+          </BlurFade>
         </div>
       ))}
     </div>
