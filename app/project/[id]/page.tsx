@@ -20,24 +20,24 @@ interface PageProps {
 
 
 // Generate dynamic metadata
-// export async function generateMetadata({ params }: {params: Promise<{ id: string }> }) {
+export async function generateMetadata(props: {params: Promise<PageProps>}) {
   
-//   const { id } = await params;
+  const { id } = await props.params;
 
-//   const item = items.find((item) => item.id === params.id);
+  const item = items.find((item) => item.id === id);
 
-//   if (!item) {
-//     return {
-//       title: "Item Not Found",
-//       description: "The requested item could not be found.",
-//     };
-//   }
+  if (!item) {
+    return {
+      title: "Item Not Found",
+      description: "The requested item could not be found.",
+    };
+  }
 
-//   return {
-//     title: `${item.title}`, // Dynamic title
-//     description: item.description2, // Use item details for metadata
-//   };
-// }
+  return {
+    title: `${item.title}`, // Dynamic title
+    description: item.description2, // Use item details for metadata
+  };
+}
 
 export default async function Page(props: { params: Promise<PageProps> }) {
   // asynchronous access of `params.id`.
