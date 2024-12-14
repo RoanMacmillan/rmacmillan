@@ -22,10 +22,14 @@ interface ProjectDetailItem {
   desktop2: string;
   detail1: string;
   detail2: string;
-  description2: string;
+  description: string;
+  description2: string; 
   description3: string;
   siteUrl: string;
   codeUrl: string;
+  href: string;
+  column: number;
+  row: number;
 }
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
