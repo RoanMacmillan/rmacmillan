@@ -36,7 +36,7 @@ const List: React.FC<ListProps> = ({ blurClass, hiddenClass }) => {
             delay={item.row === 2 ? 0 : 0.75}
             // delay={index * 0.25}
             // className={blurClass}
-
+// ddd
             // delay={0.75}
 
             inView
