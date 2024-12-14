@@ -34,6 +34,10 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function Page({ params }: PageProps) {
+
+  console.log("Params:", params);
+console.log('hello')
+
   // asynchronous access of `params.id`.
   const { id } = params;
 
@@ -41,7 +45,6 @@ export default async function Page({ params }: PageProps) {
 
   const item = items.find((item) => item.id === id);
 
-  console.log("Params:", params);
 
 
   if (!item) {

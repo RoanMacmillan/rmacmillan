@@ -2,8 +2,11 @@ import Image from "next/image";
 import React from "react";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
-import { items } from "@/data/data.json";
 import BlurFade from "../ui/blur-fade";
+import data from "@/data/data.json";
+
+
+const items = data.items;
 
 interface ListProps {
   blurClass?: string;
