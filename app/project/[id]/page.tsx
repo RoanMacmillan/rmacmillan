@@ -1,15 +1,17 @@
 import { notFound } from "next/navigation";
 import data from "@/data/data.json";
 import ProjectDetail from "@/components/containers/project/detail";
+
 const items = data.items;
+
 interface PageProps {
   params: { id: string };
 }
 
 // Generate dynamic metadata
 export async function generateMetadata({ params }: PageProps) {
-  const resolvedParams = await params; // Await params here
-  const item = items.find((item) => item.id === resolvedParams.id);
+  const resolvedParams = params; // Await params here
+  const item = items.find((item) => item.id === resolvedParams.id); // Access the resolved id
 
   if (!item) {
     return {
