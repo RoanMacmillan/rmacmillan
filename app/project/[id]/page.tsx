@@ -14,18 +14,18 @@ export async function generateMetadata({ params }: PageProps) {
   if (!item) {
     return {
       title: "Item Not Found",
-      description: "The requested item could not be found.",
+      // description: "The requested item could not be found.",
     };
   }
 
   return {
     title: `${item.title}`,
-    description: item.description2,
+    // description: item.description2,
   };
 }
 
 export default async function Page({ params }: PageProps) {
-  const resolvedParams = await params; // Await params here
+  const resolvedParams = params; // Await params here
   console.log("Resolved Params:", resolvedParams); // Logs params after awaiting
 
   const item = items.find((item) => item.id === resolvedParams.id);
