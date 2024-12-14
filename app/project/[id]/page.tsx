@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   // asynchronous access of `params.id`.
-  const { id } = await params;
+  const { id } = params;
 
   const item = items.find((item) => item.id === id);
 

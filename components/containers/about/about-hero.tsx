@@ -19,6 +19,7 @@ const AboutHero = () => {
         <Image
           src={hero}
           alt="Hero"
+          sizes="max-width: 810px"
           fill
           className="object-cover opacity-0 transition-all duration-700 scale-90"
           priority
