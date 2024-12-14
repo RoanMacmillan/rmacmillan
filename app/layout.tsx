@@ -1,11 +1,8 @@
 "use client";
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "../globals.css";
 import Nav from "@/components/containers/nav";
 import Footer from "@/components/containers/footer";
 import { Poppins } from "next/font/google";
-import LoadingBar from "@/animations/loading-bar";
 import { Toaster } from "@/components/ui/toaster";
 import ScrollToTopButton from "@/components/containers/scroll";
 

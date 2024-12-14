@@ -1,7 +1,6 @@
 "use client";
 import List from "@/components/containers/list";
 import LoadingBar from "@/animations/loading-bar";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Home() {
