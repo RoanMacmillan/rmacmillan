@@ -64,7 +64,19 @@ body {
 
 .slowFade {
 
-  animation: fadeIn 0.8s ease forwards;
+  animation: fadeIn 0.3s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slowFade {
+
+
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .fadeIn {

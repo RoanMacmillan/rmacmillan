@@ -15,7 +15,7 @@ const List: React.FC<ListProps> = ({ blurClass, hiddenClass }) => {
     <div className={`relative ${hiddenClass}`}>
  
 
-      <Separator orientation="vertical" className="lg:block hidden absolute mx-auto inset-0 h-full"></Separator>
+      <Separator orientation="vertical" className="lg:block hidden slowFade opacity-0 absolute mx-auto inset-0 h-full"></Separator>
 
       <h1 className="lg:text-[80px] text-[60px] leading-[1] tracking-[-2px]">
         <span className="font-light">
