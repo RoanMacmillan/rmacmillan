@@ -18,7 +18,6 @@ const Footer = () => {
 <Separator className="hidden bg-gray-200 sm:block sm:mb-[100px]"></Separator>
 
 
-      <ScrollToTopButton />
 
 
 
@@ -59,6 +58,9 @@ const Footer = () => {
       <p className="text-sm text-gray-500">
         © 2024 Roan Macmillan - All rights reserved
       </p>
+          
+          <ScrollToTopButton classname="bottom-[260px] right-[-40px] sm:bottom-[120px] lg:hidden"></ScrollToTopButton>
+
     </footer>
   );
 };

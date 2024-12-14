@@ -48,7 +48,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
     inView>
 
         <Image
-          className=""
+          className="rounded-sm"
           src={item.desktop1}
           alt={item.title}
           width={2000}
@@ -67,7 +67,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
           </div>
 
           <div className="lg:w-1/2">
-            <p className="mt-8 leading-7 lg:mt-0 text-gray-500">
+            <p className="mt-8 leading-7 text-sm lg:mt-0 text-gray-500">
               {item.description3}
             </p>
 
@@ -97,7 +97,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
     inView>
         
         <Image
-          className="mt-[60px] lg:mt-[120px]"
+          className="mt-[60px] lg:mt-[120px] rounded-sm"
           src={item.desktop2}
           alt={item.title}
           width={2000}

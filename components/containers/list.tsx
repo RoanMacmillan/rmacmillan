@@ -45,7 +45,7 @@ const List: React.FC<ListProps> = ({ blurClass, hiddenClass }) => {
                   : ""
               }`}
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden rounded-sm">
                 <Link className="" href={`/project/${item.id}`}>
                   <Image
                     src={item.thumbnail}

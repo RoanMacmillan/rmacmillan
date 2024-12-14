@@ -2,7 +2,13 @@ import Image from "next/image";
 import React from "react";
 
 
-const ScrollToTopButton: React.FC = () => {
+interface ScrollToTopButtonProps {
+
+
+  classname: string;
+ }
+
+const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({classname}) => {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -15,7 +21,7 @@ const ScrollToTopButton: React.FC = () => {
     <button
       type="button"
       onClick={handleScrollToTop}
-      className={`bottom-[250px] right-[-30px] lg:bottom-[125px] lg:right-[-100px] absolute group rotate-90 flex items-center font-semibold`}
+      className={`${classname} absolute group rotate-90 flex items-center font-semibold`}
     >
       <span className="mr-6 leading-3">Scroll to top</span>
       <Image

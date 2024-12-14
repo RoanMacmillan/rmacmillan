@@ -4,10 +4,10 @@ import localFont from "next/font/local";
 import "../globals.css";
 import Nav from "@/components/containers/nav";
 import Footer from "@/components/containers/footer";
-import ScrollToTopButton from "@/animations/scroll";
 import { Poppins } from "next/font/google";
 import LoadingBar from "@/animations/loading-bar";
 import { Toaster } from "@/components/ui/toaster";
+import ScrollToTopButton from "@/components/containers/scroll";
 
 const poppins = Poppins({
   subsets: ["latin"], // Specify character subsets
@@ -38,6 +38,7 @@ export default function RootLayout({
 
         <main className="mt-[50px] customMd:mt-0">{children}</main>
         <Toaster></Toaster>
+        <ScrollToTopButton classname="bottom-[130px] right-[-40px] hidden lg:flex"></ScrollToTopButton>
         <Footer></Footer>
       </body>
     </html>

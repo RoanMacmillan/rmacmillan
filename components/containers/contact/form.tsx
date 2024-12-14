@@ -5,6 +5,7 @@ import axios from "axios";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import BlurFade from "@/components/ui/blur-fade";
 
 const Form: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -139,113 +140,120 @@ const Form: React.FC = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
+    <BlurFade
+      delay={0.25}
+      // className={blurClass}
       className="mt-16 customMd:ml-0 customMd:mt-0 customMd:w-1/2"
+
+      // delay={0.75}
+
+      inView
     >
-      <div className="flex justify-between">
-        <div className="relative flex w-[45%] flex-col">
-          <label className="text-base font-bold" htmlFor="name">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Your Name"
-            className="mt-1 border-b-2 border-customBlack bg-customWhite py-4 text-sm outline-none"
-          />
-
-          {errors.name && (
-            <div className="absolute top-[-25px] text-xs text-red-500">
-              {errors.name}
-            </div>
-          )}
-        </div>
-
-        <div className="relative flex w-[45%] flex-col">
-          <label className="text-base font-bold" htmlFor="email">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Your Email"
-            className="mt-1 border-b-2 bg-customWhite border-customBlack py-4 text-sm outline-none"
-          />
-
-          {errors.email && (
-            <div className="absolute top-[-25px] text-xs text-red-500">
-              {errors.email}
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="relative mt-12 flex flex-col customMd:mt-12">
-        <label className="text-base font-bold" htmlFor="message">
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="How Can I help?"
-          className="border-b-2 bg-customWhite border-customBlack pb-12 pt-6 text-sm outline-none customMd:pb-24"
-        />
-
-        {errors.message && (
-          <div className="absolute top-[-25px] text-xs text-red-500">
-            {errors.message}
-          </div>
-        )}
-      </div>
-
-      <div className="relative mt-6 flex flex-col gap-4 customMd:mt-8">
-        <div className="flex items-center gap-2 lg:gap-4 mt-6">
-          <Checkbox
-            id="terms"
-            checked={isChecked}
-            onCheckedChange={() => setIsChecked(!isChecked)}
-          />
-          <label
-            htmlFor="terms"
-            className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          >
-            I agree to the{" "}
-            <a
-              href="#"
-              className="underline"
-              target="_blank"
-            >
-              terms and conditions
-            </a>
-          </label>
-        </div>
-
-        {termsError && <div className="text-xs text-red-500">{termsError}</div>}
-      </div>
-
-      <Button
-        type="submit"
-        className={`mt-12 w-[169px] py-5 rounded-sm font-bold ${
-          isLoading ? "brightness-75 pointer-events-none" : ""
-        }`}
-        disabled={isLoading}
+      <form
+        onSubmit={handleSubmit}
       >
-        {isLoading ? "Sending..." : "Send Message"}
-      </Button>
+        <div className="flex justify-between">
+          <div className="relative flex w-[45%] flex-col">
+            <label className="text-base font-bold" htmlFor="name">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              className="mt-1 border-b-2 border-customBlack bg-customWhite py-4 text-sm outline-none"
+            />
 
-      {isLoading && (
-        <div className="fixed left-0 w-1/2 h-1 bg-customEmerald top-0 animate-moving-bar"></div>
-      )}
-    </form>
+            {errors.name && (
+              <div className="absolute top-[-25px] text-xs text-red-500">
+                {errors.name}
+              </div>
+            )}
+          </div>
+
+          <div className="relative flex w-[45%] flex-col">
+            <label className="text-base font-bold" htmlFor="email">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              className="mt-1 border-b-2 bg-customWhite border-customBlack py-4 text-sm outline-none"
+            />
+
+            {errors.email && (
+              <div className="absolute top-[-25px] text-xs text-red-500">
+                {errors.email}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="relative mt-12 flex flex-col customMd:mt-12">
+          <label className="text-base font-bold" htmlFor="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="How Can I help?"
+            className="border-b-2 bg-customWhite border-customBlack pb-12 pt-6 text-sm outline-none customMd:pb-24"
+          />
+
+          {errors.message && (
+            <div className="absolute top-[-25px] text-xs text-red-500">
+              {errors.message}
+            </div>
+          )}
+        </div>
+
+        <div className="relative mt-6 flex flex-col gap-4 customMd:mt-8">
+          <div className="flex items-center gap-2 lg:gap-4 mt-6">
+            <Checkbox
+              id="terms"
+              checked={isChecked}
+              onCheckedChange={() => setIsChecked(!isChecked)}
+            />
+            <label
+              htmlFor="terms"
+              className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              I agree to the{" "}
+              <a href="#" className="underline" target="_blank">
+                terms and conditions
+              </a>
+            </label>
+          </div>
+
+          {termsError && (
+            <div className="text-xs text-red-500">{termsError}</div>
+          )}
+        </div>
+
+        <Button
+          type="submit"
+          className={`mt-12 w-[169px] py-5 rounded-sm font-bold ${
+            isLoading ? "brightness-75 pointer-events-none" : ""
+          }`}
+          disabled={isLoading}
+        >
+          {isLoading ? "Sending..." : "Send Message"}
+        </Button>
+
+        {isLoading && (
+          <div className="fixed left-0 w-1/2 h-1 bg-customEmerald top-0 animate-moving-bar"></div>
+        )}
+      </form>
+    </BlurFade>
   );
 };
 
