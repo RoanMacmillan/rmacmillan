@@ -82,12 +82,19 @@ const Form: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post(
-        "/.netlify/functions/sendEmail",
-        formData
-      );
+      // const response = await axios.post(
+      //   "/.netlify/functions/sendEmail",
+      //   formData
+      // );
 
-      if (response.status === 200) {
+
+      const response = await fetch('/api/route', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
         console.log("Email sent successfully");
 
         setFormData((prevFormData) => ({
