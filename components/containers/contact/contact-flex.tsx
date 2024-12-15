@@ -12,9 +12,11 @@ const ContactFlex = () => {
   return (
     <ul className="customMd:mt-24 mt-20 customMd:flex">
       {items.map((item, index) => (
-        <BlurFade delay={index * 0.1} inView>
+        <BlurFade
+        key={index}
+        
+        delay={index * 0.1}  inView>
           <div
-            key={item.id}
             className={`mt-4 p-8 customMd:mt-0 customMd:px-14 customMd:py-12 ${
               item.id === 1 ? "customMd:pl-0" : ""
             } ${item.id === 2 ? "border border-gray-200" : ""}
