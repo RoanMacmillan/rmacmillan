@@ -1,7 +1,7 @@
 import { Handler } from "@netlify/functions";
 import nodemailer from "nodemailer";
 
-const handler = async (event) => {
+const handler: Handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -21,7 +21,7 @@ const handler = async (event) => {
 
     // Nodemailer setup
     const transporter = nodemailer.createTransport({
-      service: "hotmail", // Or any other service like SendGrid, Mailgun, etc.
+      service: "outlook.com", // Or any other service like SendGrid, Mailgun, etc.
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -51,4 +51,4 @@ const handler = async (event) => {
   }
 };
 
-export { Handler };
+export { handler };
