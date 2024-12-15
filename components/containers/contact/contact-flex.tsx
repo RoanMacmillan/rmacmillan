@@ -11,8 +11,8 @@ import BlurFade from "@/components/ui/blur-fade";
 const ContactFlex = () => {
   return (
     <ul className="customMd:mt-24 mt-20 customMd:flex">
-      {items.map((item) => (
-        <BlurFade delay={item.id * 0.1} inView>
+      {items.map((item, index) => (
+        <BlurFade delay={index * 0.1} inView>
           <div
             key={item.id}
             className={`mt-4 p-8 customMd:mt-0 customMd:px-14 customMd:py-12 ${
