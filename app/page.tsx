@@ -34,7 +34,9 @@ export default function Home() {
 
       <List 
       
-      hiddenClass={`${loading ? 'hidden' : 'block'}`} >
+      hiddenClass={`${loading ? 'hidden' : 'block'}`}
+      
+      >
       
 
 

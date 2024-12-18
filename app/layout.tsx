@@ -28,10 +28,7 @@ export default function RootLayout({
       <body
         className={`antialiased mx-auto bg-customWhite m-0 min-h-full relative customMd:pt-[184px] pb-1`}
       >
-
-        <header>
-          <Nav></Nav>
-        </header>
+        <Nav></Nav>
 
         <main className="mt-[50px] customMd:mt-0">{children}</main>
         <Toaster></Toaster>

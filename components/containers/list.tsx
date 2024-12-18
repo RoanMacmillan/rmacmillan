@@ -13,7 +13,7 @@ interface ListProps {
   hiddenClass?: string;
 }
 
-const List: React.FC<ListProps> = ({ blurClass, hiddenClass }) => {
+const List: React.FC<ListProps> = ({ hiddenClass }) => {
   return (
     <div className={`relative ${hiddenClass}`}>
  
@@ -34,10 +34,6 @@ const List: React.FC<ListProps> = ({ blurClass, hiddenClass }) => {
           <BlurFade
             key={index}
             delay={item.row === 2 ? 0 : 0.75}
-            // delay={index * 0.25}
-            // className={blurClass}
-// ddd
-            // delay={0.75}
 
             inView
           >

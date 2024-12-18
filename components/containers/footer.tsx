@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ScrollToTopButton from "./scroll";
 import { Separator } from "../ui/separator";
-
 const Footer = () => {
   const pathname = usePathname();
 
@@ -12,15 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1380px] mx-auto px-6 customMd:px-20">
-
-
-
-<Separator className="hidden bg-gray-200 sm:block sm:mb-[100px]"></Separator>
-
-
-
-
-
+      <Separator className="hidden bg-gray-200 sm:block sm:mb-[100px]"></Separator>
 
       <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[70px]">
         <span className="font-light">{footerContent.title}</span>
@@ -47,6 +38,7 @@ const Footer = () => {
               <Link
                 className="text-[20px] hover:text-customEmerald transition-colors font-medium sm:text-sm"
                 href={link.url}
+                scroll={true}
               >
                 {link.name}
               </Link>
@@ -58,9 +50,8 @@ const Footer = () => {
       <p className="text-sm text-gray-500">
         © 2024 Roan Macmillan - All rights reserved
       </p>
-          
-          <ScrollToTopButton classname="bottom-[260px] right-[-40px] sm:bottom-[120px] lg:hidden"></ScrollToTopButton>
 
+      <ScrollToTopButton classname="bottom-[260px] right-[-40px] sm:bottom-[120px] lg:hidden"></ScrollToTopButton>
     </footer>
   );
 };

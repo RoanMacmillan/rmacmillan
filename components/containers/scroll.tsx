@@ -12,7 +12,7 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({classname}) => {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Optional: Makes the scrolling smooth
+      behavior: 'smooth', // Optional: Makes the scrolling smooth
     });
   };
 
