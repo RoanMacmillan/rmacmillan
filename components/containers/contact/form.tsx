@@ -6,6 +6,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import BlurFade from "@/components/ui/blur-fade";
+import { ToastAction } from "@/components/ui/toast";
+import { LucideCircleCheck, LucideCircleX } from "lucide-react";
 
 const Form: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -110,8 +112,20 @@ const Form: React.FC = () => {
 
         setTermsError("");
         toast({
+          title:
+            "Message sent successfully.",
           description:
-            "Your message has been sent. I try to respond within 24 hours.",
+          // "I try to respond within 24 hours. Thank you for reaching out!",
+          
+          <div>
+            <p className="w-[80%]">I try to respond within 24 hours. Thank you for reaching out!</p>
+            <div className="h-full absolute right-[16px] top-0 flex items-center">
+            <LucideCircleCheck className="w-8 h-8 lg:w-10 lg:h-10 text-customEmerald" />
+            </div>
+
+          </div>
+          
+            // className: "bg-customEmerald",
         });
       } else {
         console.error("Failed to send email");
@@ -138,8 +152,12 @@ const Form: React.FC = () => {
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
         description:
-          "Message could not be sent. Please contact me through social media.",
-        // action: <ToastAction altText="Try again">Try again</ToastAction>,
+        <div>
+        <p className="w-[80%]">Message could not be sent. Please contact me on social media</p>
+        <div className="h-full absolute right-[16px] top-0 flex items-center">
+        <LucideCircleX className="w-8 h-8 lg:w-10 lg:h-10 text-red-500" />
+        </div>
+      </div>
       });
     } finally {
       setIsLoading(false);
