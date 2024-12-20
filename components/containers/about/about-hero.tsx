@@ -1,8 +1,8 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
 import hero from "../../../public/images/abouthero.webp";
+import LoadingBar from "@/animations/loading-bar";
 
 const AboutHero = () => {
   const handleScroll = () => {
@@ -14,6 +14,8 @@ const AboutHero = () => {
 
 
   return (
+    <>
+    <LoadingBar backgroundColorClass="bg-customBlack"></LoadingBar>
     <div className="relative sm:flex sm:flex-row-reverse sm:items-center sm:gap-24 sm:justify-between max-w-[1380px] px-6 customMd:px-20 mx-auto">
       <div className="h-[300px] sm:h-[440px] sm:w-1/2 w-full sm:max-w-[510px] relative">
         <Image
@@ -49,6 +51,7 @@ const AboutHero = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

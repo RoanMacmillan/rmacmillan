@@ -3,9 +3,12 @@
 import React from "react";
 import photo from "../../../public/images/blackhero.webp";
 import Image from "next/image";
+import LoadingBar from "@/animations/loading-bar";
 
 const ContactHero = () => {
   return (
+    <>
+    <LoadingBar backgroundColorClass="bg-customBlack"></LoadingBar>
     <div
       className={`relative mx-auto flex h-[300px] justify-center transition-all duration-500 customMd:h-[480px]`}
     >
@@ -23,6 +26,7 @@ const ContactHero = () => {
 
       />
     </div>
+    </>
   );
 };
 
