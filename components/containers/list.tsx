@@ -34,7 +34,7 @@ const List: React.FC<ListProps> = ({ hiddenClass }) => {
           <BlurFade
             key={index}
             delay={item.row === 2 ? 0 : 0.75}
-
+            // transitionType="opacity"
             inView
           >
             <li
@@ -51,6 +51,7 @@ const List: React.FC<ListProps> = ({ hiddenClass }) => {
                     alt={item.title}
                     width={600}
                     height={600}
+                    priority={true}
                     className="lg:hover:scale-[1.03] transition-transform duration-700"
                   />
                 </Link>

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { links } from "./footer";
+import { links } from '@/data/links'
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import cross from '../../public/images/close.svg'

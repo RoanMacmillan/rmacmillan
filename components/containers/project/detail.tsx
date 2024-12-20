@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -6,7 +6,6 @@ import Link from "next/link";
 import React from "react";
 import LoadingBar from "../../../animations/loading-bar";
 import BlurFade from "@/components/ui/blur-fade";
- 
 
 interface ProjectDetailProps {
   item: ProjectDetailItem;
@@ -22,7 +21,7 @@ interface ProjectDetailItem {
   detail1: string;
   detail2: string;
   description: string;
-  description2: string; 
+  description2: string;
   description3: string;
   siteUrl: string;
   codeUrl: string;
@@ -34,7 +33,7 @@ interface ProjectDetailItem {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
   return (
     <div className=" max-w-[1380px] mx-auto px-6 customMd:px-20">
-        <LoadingBar backgroundColorClass="bg-customBlack" />
+      <LoadingBar backgroundColorClass="bg-customBlack" />
       <p>{item.number}-04</p>
       <h1 className="mt-4 text-[60px] customMd:text-[80px] leading-[1] tracking-[-2px] font-bold">
         {item.title}
@@ -42,22 +41,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
       <div className="h-[5px] bg-black w-12 mt-6 "></div>
 
       <div className="mt-[40px] customMd:mt-[80px]">
-      
-
-    <BlurFade
-    
-    delay={0.25}
-    
-    inView>
-
-        <Image
-          className="rounded-sm"
-          src={item.desktop1}
-          alt={item.title}
-          width={2000}
-          height={2000}
-        ></Image>
-
+        <BlurFade delay={0.25} inView>
+          <Image
+            className="rounded-sm"
+            src={item.desktop1}
+            alt={item.title}
+            width={2000}
+            height={2000}
+            priority={true}
+          ></Image>
         </BlurFade>
 
         <h2 className="mt-[60px] lg:mt-[80px] text-gray-500">About</h2>
@@ -92,21 +84,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
           </div>
         </div>
 
-
-        <BlurFade
-    
-    delay={0.25}
-    
-    inView>
-        
-        <Image
-          className="mt-[60px] lg:mt-[120px] rounded-sm"
-          src={item.desktop2}
-          alt={item.title}
-          width={2000}
-          height={2000}
-        ></Image>
-
+        <BlurFade delay={0.25} inView>
+          <Image
+            className="mt-[60px] lg:mt-[120px] rounded-sm"
+            src={item.desktop2}
+            alt={item.title}
+            width={2000}
+            height={2000}
+          ></Image>
         </BlurFade>
 
         <Separator className="mt-[60px] sm:hidden" />

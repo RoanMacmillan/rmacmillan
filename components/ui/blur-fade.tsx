@@ -11,19 +11,19 @@ import {
 
 type MarginType = UseInViewOptions["margin"];
 
+type TransitionType = "opacity" | "width" | "both"; // Define transition types
+
 interface BlurFadeProps {
   children: React.ReactNode;
   className?: string;
-  variant?: {
-    hidden: { y: number };
-    visible: { y: number };
-  };
+  variant?: Variants; // Allow overriding the variants
   duration?: number;
   delay?: number;
   yOffset?: number;
   inView?: boolean;
   inViewMargin?: MarginType;
   blur?: string;
+  transitionType?: TransitionType; // New prop to define the transition type
 }
 
 export default function BlurFade({
@@ -36,15 +36,35 @@ export default function BlurFade({
   inView = false,
   inViewMargin = "-50px",
   blur = "0px",
+  transitionType = "opacity", // Default to opacity
 }: BlurFadeProps) {
   const ref = useRef(null);
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
   const isInView = !inView || inViewResult;
-  const defaultVariants: Variants = {
-    hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },
-    visible: { y: -yOffset, opacity: 1, filter: `blur(0px)` },
+
+  // Define variants based on transitionType
+  const getVariants = (): Variants => {
+    switch (transitionType) {
+      case "width":
+        return {
+          hidden: { width: "0%", opacity: 1, filter: `blur(${blur})` },
+          visible: { width: "100%", opacity: 1, filter: `blur(0px)` },
+        };
+      case "both":
+        return {
+          hidden: { width: "0%", opacity: 0, filter: `blur(${blur})` },
+          visible: { width: "100%", opacity: 1, filter: `blur(0px)` },
+        };
+      default: // "opacity"
+        return {
+          hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },
+          visible: { y: -yOffset, opacity: 1, filter: `blur(0px)` },
+        };
+    }
   };
-  const combinedVariants = variant || defaultVariants;
+
+  const combinedVariants = variant || getVariants();
+
   return (
     <AnimatePresence>
       <motion.div

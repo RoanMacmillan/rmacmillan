@@ -1,3 +1,5 @@
+
+import React from 'react';
 import HomeContainer from "@/components/containers/home/home-container";
 
 export const metadata = {

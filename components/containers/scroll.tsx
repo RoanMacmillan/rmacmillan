@@ -1,25 +1,21 @@
 import Image from "next/image";
 import React from "react";
 
-
 interface ScrollToTopButtonProps {
-
-
   classname: string;
- }
+}
 
-const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({classname}) => {
+const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ classname }) => {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Optional: Makes the scrolling smooth
+      behavior: "smooth", // Optional: Makes the scrolling smooth
     });
   };
 
-
   return (
     <button
-      type="button"
+      // type="button"
       onClick={handleScrollToTop}
       className={`${classname} absolute group rotate-90 flex items-center font-semibold`}
     >

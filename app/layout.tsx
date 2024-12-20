@@ -3,6 +3,7 @@ import Nav from "@/components/containers/nav";
 import Footer from "@/components/containers/footer";
 import { Poppins } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
+import ScrollOnNavigate from "@/components/ScrollOnNavigate";
 
 const poppins = Poppins({
   subsets: ["latin"], // Specify character subsets
@@ -12,15 +13,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-
   icons: {
-
     icon: "/favicon.ico",
-
-  }
-
-
-
+  },
 };
 
 export default function RootLayout({
@@ -29,15 +24,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="h-full" lang="en">
+    <html lang="en">
+
       <body
         className={`antialiased mx-auto bg-customWhite m-0 min-h-full relative customMd:pt-[184px] pb-1`}
       >
         <Nav></Nav>
-
         <main className="mt-[50px] customMd:mt-0">{children}</main>
         <Toaster></Toaster>
         <Footer></Footer>
+        <ScrollOnNavigate></ScrollOnNavigate>
+
       </body>
     </html>
   );

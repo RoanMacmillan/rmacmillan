@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import photo from "../../../public/images/blackhero.webp";
@@ -8,24 +8,21 @@ import LoadingBar from "@/animations/loading-bar";
 const ContactHero = () => {
   return (
     <>
-    <LoadingBar backgroundColorClass="bg-customBlack"></LoadingBar>
-    <div
-      className={`relative mx-auto flex h-[300px] justify-center transition-all duration-500 customMd:h-[480px]`}
-    >
-      <Image
-        alt="dark image"
-        src={photo}
-        quality={100}
-        priority={true}
-        className="object-cover opacity-0 transition-all duration-700 scale-90"
-        
-        onLoadingComplete={(image) => {
-          image.classList.remove("opacity-0");
-          image.classList.remove("scale-90");
-        }}
-
-      />
-    </div>
+      <LoadingBar backgroundColorClass="bg-customBlack"></LoadingBar>
+      <div
+        className={`relative mx-auto flex h-[300px] justify-center transition-all duration-500 customMd:h-[480px]`}
+      >
+        <Image
+          alt="dark image"
+          src={photo}
+          priority={true}
+          className="object-cover opacity-0 transition-all duration-700 scale-90"
+          onLoad={(e) => {
+            e.currentTarget.classList.remove("opacity-0");
+            e.currentTarget.classList.add("scale-100");
+          }}
+        />
+      </div>
     </>
   );
 };
