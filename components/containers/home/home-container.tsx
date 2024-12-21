@@ -30,7 +30,7 @@ export default function HomeContainer() {
         <LoadingBar backgroundColorClass="bg-customEmerald"></LoadingBar>
       </div>
 
-      {loading && <div className="w-full h-screen absolute top-0 left-0 bg-customWhite z-20"></div>}
+      {loading && <div className="w-full min-h-full absolute top-0 left-0 bg-customWhite z-20"></div>}
 
       <List 
       

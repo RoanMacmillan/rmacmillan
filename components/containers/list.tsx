@@ -32,8 +32,6 @@ const List: React.FC<ListProps> = ({ loadDelay }) => {
           <BlurFade
             key={index}
             delay={loadDelay}
-            // transitionType="opacity"
-            // className="hidden"
             inView
           >
             <li
