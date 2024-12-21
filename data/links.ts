@@ -1,6 +1,7 @@
 export const links = [
-    { id: 1, name: "Twitter", url: "https://twitter.com" },
-    { id: 2, name: "Instagram", url: "https://instagram.com" },
-    { id: 3, name: "LinkedIn", url: "https://linkedin.com" },
-    { id: 4, name: "GitHub", url: "https://github.com" },
+    { id: 1, name: "LinkedIn", url: "https://linkedin.com" },
+    { id: 2, name: "GitHub", url: "https://github.com/RoanMacmillan" },
+    { id: 3, name: "Twitter", url: "https://x.com/roan1875" },
+    { id: 4, name: "Instagram", url: "https://instagram.com" },
+
   ];

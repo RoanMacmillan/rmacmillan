@@ -33,8 +33,8 @@
     "desktop2": "/images/mobile-detail2.png",
     "description2": "An image sharing app using the Unsplash API",
     "description3": "This app, built with Next.js and powered by the Unsplash API, allows users to explore, showcase, and share high-quality images. It features search functionality, user profiles, image filtering, and responsive design, providing an engaging experience for photo enthusiasts",
-    "siteUrl": "https://www.google.com",
-    "codeUrl": "https://www.google.com",
+    "siteUrl": "https://image-search-theta-seven.vercel.app/",
+    "codeUrl": "https://github.com/RoanMacmillan/image-search",
     "column": 2,
     "row": 1
   },
