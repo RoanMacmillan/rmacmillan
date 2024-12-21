@@ -48,11 +48,11 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ classname }) => {
       ref={buttonRef}
       type="button"
       onClick={handleScrollToTop}
-      className={`${classname} absolute group rotate-90 flex items-center font-semibold transition-opacity duration-700 ${
-        isVisible ? 'opacity-100' : 'opacity-0'
+      className={`${classname} group rotate-90 flex items-center font-semibold transition-all duration-700 delay-100 lg:duration-1000 ${
+        isVisible ? 'opacity-100 lg:-mr-9' : 'opacity-0 lg:opacity-100 lg:-mr-[80px]'
       }`}
     >
-      <span className="mr-6 leading-3">Scroll to top</span>
+      <span className="mr-5 text-sm leading-3">Scroll to top</span>
       <Image
         className="rotate-90 group-hover:scale-[1.2] transition-transform duration-500"
         src="/images/arrow.svg"

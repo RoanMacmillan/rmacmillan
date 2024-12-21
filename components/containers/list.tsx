@@ -32,6 +32,7 @@ const List: React.FC<ListProps> = ({ loadDelay }) => {
           <BlurFade
             key={index}
             delay={loadDelay}
+            
             yOffset={10}
             inView={true}
             className={`mb-16 lg:mb-0 sm:max-w-[500px] relative ${

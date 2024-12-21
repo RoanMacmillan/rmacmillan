@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <>
-        <ScrollToTopButton classname="bottom-[120px] right-[-40px] hidden lg:flex"></ScrollToTopButton>
+        {/* <ScrollToTopButton classname="bottom-[120px] right-[-40px] hidden lg:flex"></ScrollToTopButton> */}
 
       <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1380px] mx-auto px-6 customMd:px-20">
 
@@ -21,7 +21,7 @@ const Footer = () => {
         <Separator className="hidden bg-gray-200 sm:block sm:mb-[100px]"></Separator>
         </BlurFade>
 
-        <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[70px]">
+        <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[80px]">
           <span className="font-light">{footerContent.title}</span>
           <span className="font-bold">{footerContent.title2}</span>
         </h2>
@@ -61,7 +61,7 @@ const Footer = () => {
           © 2024 Roan Macmillan - All rights reserved
         </p>
 
-        <ScrollToTopButton classname="bottom-[260px] right-[-40px] sm:bottom-[120px] lg:hidden"></ScrollToTopButton>
+        <ScrollToTopButton classname="bottom-[260px] right-[-40px] sm:bottom-[120px] lg:hidden absolute"></ScrollToTopButton>
       </footer>
     </>
   );

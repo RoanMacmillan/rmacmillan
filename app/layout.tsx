@@ -4,6 +4,7 @@ import Footer from "@/components/containers/footer";
 import { Poppins } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import ScrollOnNavigate from "@/components/ScrollOnNavigate";
+import ScrollContainer from "@/components/containers/scroll-container";
 
 const poppins = Poppins({
   subsets: ["latin"], // Specify character subsets
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Toaster></Toaster>
         <Footer></Footer>
         {/* <ScrollOnNavigate></ScrollOnNavigate> */}
+        <ScrollContainer></ScrollContainer>
 
       </body>
     </html>

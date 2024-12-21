@@ -67,14 +67,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
             </p>
 
             <div className="mt-8 flex gap-10">
-              <Link href={item.siteUrl} className="group text-left">
+                <Link href={item.siteUrl} className="group text-left" target="_blank" rel="noopener noreferrer">
                 <p className="font-semibold">View Preview</p>
                 <div className="relative mt-[5px] h-[2px] w-28 bg-gray-200">
                   <div className="absolute left-0 top-0 h-[2px] w-0 bg-emerald-600 transition-all duration-300 group-hover:w-full"></div>
                 </div>
-              </Link>
+                </Link>
 
-              <Link href={item.codeUrl} className="group text-left">
+              <Link href={item.codeUrl} className="group text-left" target="_blank" rel="noopener noreferrer">
                 <p className="font-semibold">View Code</p>
                 <div className="relative mt-[5px] h-[2px] w-[92px] bg-gray-200">
                   <div className="absolute left-0 top-0 h-[2px] w-0 bg-emerald-600 transition-all duration-300 group-hover:w-full"></div>

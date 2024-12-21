@@ -15,8 +15,8 @@
     "desktop2": "/images/audio-detail2.webp",
     "description2": "A clean user-friendly e-commerce site",
     "description3": "This project is an e-commerce platform for purchasing audio equipment, which I built with React. It includes detailed pages of each item, a functional cart, and checkout system.",
-    "siteUrl": "https://www.google.com",
-    "codeUrl": "https://www.google.com",
+    "siteUrl": "https://master-astonishing-wisp-499e69.netlify.app/",
+    "codeUrl": "https://github.com/RoanMacmillan/audiophile-ecommerce-site",
     "column": 1,
     "row": 1
   },
@@ -51,8 +51,8 @@
     "desktop2": "/images/galleria-detail2.webp",
     "description2": "An elegant gallery with masonry-style layout",
     "description3": "A masonry style layout made with CSS grid and React. It features a slideshow and lightbox feature to view the images.",
-    "siteUrl": "https://www.google.com",
-    "codeUrl": "https://www.google.com",
+    "siteUrl": "https://image-search-theta-seven.vercel.app/",
+    "codeUrl": "https://github.com/RoanMacmillan/image-search",
     "column": 1,
     "row": 2
 
@@ -71,8 +71,8 @@
     "desktop2": "/images/archdetail2.webp",
     "description2": "A visually captivating architecture portfolio",
     "description3": "An Architecure portfolio that displays multiple projects, built with react. It includes a detailed about and contact page, with leafletjs for the map feature.",
-    "siteUrl": "https://www.google.com",
-    "codeUrl": "https://www.google.com",
+    "siteUrl": "https://arch-studio-vite.netlify.app/",
+    "codeUrl": "https://github.com/RoanMacmillan/arch-studio-vite",
     "column": 2,
     "row": 2
   
