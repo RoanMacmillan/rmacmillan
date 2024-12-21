@@ -165,6 +165,7 @@ const Form: React.FC = () => {
   };
 
   return (
+    <>
     <BlurFade
       delay={0.25}
       // className={blurClass}
@@ -274,11 +275,15 @@ const Form: React.FC = () => {
           {isLoading ? "Sending..." : "Send Message"}
         </Button>
 
-        {isLoading && (
+        {/* {isLoading && (
           <div className="fixed left-0 w-1/2 h-1 bg-customEmerald top-0 animate-moving-bar"></div>
-        )}
+        )} */}
       </form>
     </BlurFade>
+    {isLoading && (
+          <div className="fixed left-0 w-2/3 h-1 bg-customEmerald top-0 animate-moving-bar"></div>
+        )}
+    </>
   );
 };
 

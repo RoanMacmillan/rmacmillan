@@ -16,10 +16,11 @@ const ContactHero = () => {
           alt="dark image"
           src={photo}
           priority={true}
-          className="object-cover opacity-0 transition-all duration-700 scale-90"
+          fill={true}
+          className="object-cover  opacity-0 transition-all duration-700 scale-90"
           onLoad={(e) => {
             e.currentTarget.classList.remove("opacity-0");
-            e.currentTarget.classList.add("scale-100");
+            e.currentTarget.classList.remove("scale-90");
           }}
         />
       </div>

@@ -33,7 +33,7 @@ export default function RootLayout({
         <main className="mt-[50px] customMd:mt-0">{children}</main>
         <Toaster></Toaster>
         <Footer></Footer>
-        <ScrollOnNavigate></ScrollOnNavigate>
+        {/* <ScrollOnNavigate></ScrollOnNavigate> */}
 
       </body>
     </html>
