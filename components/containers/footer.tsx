@@ -21,7 +21,7 @@ const Footer = () => {
         <Separator className="hidden bg-gray-200 sm:block sm:mb-[100px]"></Separator>
         </BlurFade>
 
-        <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[80px]">
+        <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[80px] lg:tracking-tighter">
           <span className="font-light">{footerContent.title}</span>
           <span className="font-bold">{footerContent.title2}</span>
         </h2>
