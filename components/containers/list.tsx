@@ -32,14 +32,16 @@ const List: React.FC<ListProps> = ({ loadDelay }) => {
           <BlurFade
             key={index}
             delay={loadDelay}
-            inView
+            yOffset={10}
+            inView={true}
+            className={`mb-16 lg:mb-0 sm:max-w-[500px] relative ${
+              item.column === 2
+                ? "sm:-mt-[100px] lg:-mt-[150px] sm:ml-auto"
+                : ""
+            }`}
           >
             <li
-              className={`mb-16 lg:mb-0 sm:max-w-[500px] relative ${
-                item.column === 2
-                  ? "sm:-mt-[100px] lg:-mt-[150px] sm:ml-auto"
-                  : ""
-              }`}
+             
             >
               <div className="overflow-hidden rounded-sm">
                 <Link className="" href={`/project/${item.id}`}>
