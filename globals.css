@@ -65,7 +65,7 @@ body {
 .slowFade {
 
   animation: fadeIn 0.3s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes slowFade {

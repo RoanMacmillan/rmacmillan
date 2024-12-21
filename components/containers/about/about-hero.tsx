@@ -24,6 +24,10 @@ const AboutHero = () => {
           sizes="max-width: 810px"
           fill
           className="object-cover opacity-0 transition-all duration-700 scale-90"
+          onLoad={(e) => {
+            e.currentTarget.classList.remove("opacity-0");
+            e.currentTarget.classList.add("scale-100");
+          }}
           priority
           
         />

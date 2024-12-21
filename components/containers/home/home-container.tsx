@@ -34,8 +34,7 @@ export default function HomeContainer() {
 
       <List 
       
-      hiddenClass={`${loading ? 'hidden' : 'block'}`}
-      
+      loadDelay={loading ? 1.5 : 0.25}  
       >
       
 

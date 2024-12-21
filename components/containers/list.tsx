@@ -9,14 +9,12 @@ import data from "@/data/data.json";
 const items = data.items;
 
 interface ListProps {
-  blurClass?: string;
-  hiddenClass?: string;
+  loadDelay?: number;
 }
 
-const List: React.FC<ListProps> = ({ hiddenClass }) => {
+const List: React.FC<ListProps> = ({ loadDelay }) => {
   return (
-    <div className={`relative ${hiddenClass}`}>
- 
+    <div className={`relative`}>
 
       <Separator orientation="vertical" className="lg:block hidden slowFade opacity-0 absolute mx-auto inset-0 h-full"></Separator>
 
@@ -33,8 +31,9 @@ const List: React.FC<ListProps> = ({ hiddenClass }) => {
         {items.map((item, index) => (
           <BlurFade
             key={index}
-            delay={item.row === 2 ? 0 : 0.75}
+            delay={loadDelay}
             // transitionType="opacity"
+            // className="hidden"
             inView
           >
             <li
