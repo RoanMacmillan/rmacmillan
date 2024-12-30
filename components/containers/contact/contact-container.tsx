@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import React from "react";
 import Form from "./form";
 
@@ -21,12 +19,7 @@ const ContactForm: React.FC = () => {
             fill out the form below with your questions.
           </p>
         </div>
- 
-        {/* <form></form> */}
-
         <Form></Form>
-
-        
       </div>
     </div>
   );

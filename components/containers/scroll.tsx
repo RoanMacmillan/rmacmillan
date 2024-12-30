@@ -12,7 +12,6 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ classname }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();  // Get the current pathname
 
-  // Reset the fade-in effect whenever the page route changes
   useEffect(() => {
     setIsVisible(false);  // Reset visibility to false initially
 

@@ -3,7 +3,6 @@ import Nav from "@/components/containers/nav";
 import Footer from "@/components/containers/footer";
 import { Poppins } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
-import ScrollOnNavigate from "@/components/ScrollOnNavigate";
 import ScrollContainer from "@/components/containers/scroll-container";
 
 const poppins = Poppins({
@@ -34,7 +33,6 @@ export default function RootLayout({
         <main className="mt-[50px] customMd:mt-0">{children}</main>
         <Toaster></Toaster>
         <Footer></Footer>
-        {/* <ScrollOnNavigate></ScrollOnNavigate> */}
         <ScrollContainer></ScrollContainer>
 
       </body>

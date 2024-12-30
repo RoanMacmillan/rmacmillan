@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -29,14 +29,13 @@ const SkillsGrid = () => {
           `}
         >
           <BlurFade delay={skill.id * 0.05} inView>
-          <Image
-            src={skill.logo}
-            alt={`${skill.name} Logo`}
-            width={60}
-            height={60}
-            className={`overflow-hidden`}
-           
-          />
+            <Image
+              src={skill.logo}
+              alt={`${skill.name} Logo`}
+              width={60}
+              height={60}
+              className={`overflow-hidden`}
+            />
           </BlurFade>
         </div>
       ))}

@@ -1,12 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import axios from "axios";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import BlurFade from "@/components/ui/blur-fade";
-import { ToastAction } from "@/components/ui/toast";
 import { LucideCircleCheck, LucideCircleX } from "lucide-react";
 
 const Form: React.FC = () => {
@@ -84,11 +82,6 @@ const Form: React.FC = () => {
     setIsLoading(true);
 
     try {
-      // const response = await axios.post(
-      //   "/.netlify/functions/sendEmail",
-      //   formData
-      // );
-
 
       const response = await fetch('/api/route', {
         method: 'POST',
@@ -168,10 +161,7 @@ const Form: React.FC = () => {
     <>
     <BlurFade
       delay={0.25}
-      // className={blurClass}
       className="mt-16 customMd:ml-0 customMd:mt-0 customMd:w-1/2"
-
-      // delay={0.75}
 
       inView
     >
@@ -275,9 +265,7 @@ const Form: React.FC = () => {
           {isLoading ? "Sending..." : "Send Message"}
         </Button>
 
-        {/* {isLoading && (
-          <div className="fixed left-0 w-1/2 h-1 bg-customEmerald top-0 animate-moving-bar"></div>
-        )} */}
+    
       </form>
     </BlurFade>
     {isLoading && (

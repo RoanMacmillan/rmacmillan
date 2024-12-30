@@ -5,7 +5,6 @@ import Image from "next/image";
 import mail from "../../../public/images/mail.svg";
 import location from "../../../public/images/location.svg";
 import phone from "../../../public/images/phone.svg";
-import useIntersectionObserver from "@/hooks/fadeIn";
 import BlurFade from "@/components/ui/blur-fade";
 
 const ContactFlex = () => {

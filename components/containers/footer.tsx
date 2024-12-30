@@ -13,7 +13,6 @@ const Footer = () => {
 
   return (
     <>
-        {/* <ScrollToTopButton classname="bottom-[120px] right-[-40px] hidden lg:flex"></ScrollToTopButton> */}
 
       <footer className="mt-[60px] mb-[20px] relative lg:mt-[150px] max-w-[1380px] mx-auto px-6 customMd:px-20">
 
@@ -21,7 +20,7 @@ const Footer = () => {
         <Separator className="hidden bg-gray-200 sm:block sm:mb-[100px]"></Separator>
         </BlurFade>
 
-        <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[80px] lg:tracking-tighter">
+        <h2 className="text-[60px] leading-[1] flex flex-col pb-[30px] lg:flex-row lg:gap-2 lg:text-[80px] tracking-tight">
           <span className="font-light">{footerContent.title}</span>
           <span className="font-bold">{footerContent.title2}</span>
         </h2>
@@ -85,13 +84,6 @@ function getFooterContent(pathname: string) {
         title2: `Talk`,
         link: { href: "/contact", label: "Contact", underlinWidth: "w-[70px]" },
       };
-
-    // case "/project":
-    //   return {
-    //     title: `See`,
-    //     title2: `More`,
-    //     link: { href: "/", label: "Portfolio", underlinWidth: "w-[70px]" },
-    //   };
 
     case "/contact":
       return {

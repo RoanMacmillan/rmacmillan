@@ -46,8 +46,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
             className="rounded-sm"
             src={item.desktop1}
             alt={item.title}
-            width={2000}
-            height={2000}
+            width={1300}
+            height={1300}
             priority={true}
           ></Image>
         </BlurFade>
@@ -89,8 +89,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ item }) => {
             className="mt-[60px] lg:mt-[120px] rounded-sm"
             src={item.desktop2}
             alt={item.title}
-            width={2000}
-            height={2000}
+            width={1300}
+            height={1300}
           ></Image>
         </BlurFade>
 
